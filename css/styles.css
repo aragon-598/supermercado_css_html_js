@@ -1,0 +1,243 @@
+/*Quitando margenes por defecto-----------------------------------------------------------------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Menú navbar----------------------------------------------------------------------------------------------*/
+
+header {
+    background: rgb(255, 255, 255);
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+}
+
+nav {
+    float: right;
+    /* Desplazamos el nav hacia la izquierda */
+}
+
+nav ul {
+    list-style: none;
+    /*Quitamos los estilos a las listas*/
+    overflow: hidden;
+    /*Quitamos errores del float*/
+}
+
+nav ul li {
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 20px;
+    color: #29323c;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background: #aebdaf;
+}
+
+
+/*Cambios para body y contenedor y botones------------------------------------------------------------------*/
+
+body {
+    display: flex;
+    font: bold 90% monospace;
+    font-style: inherit;
+    color: #ffffff;
+    background-image: url('/images/sm.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.container {
+    padding-top: 80px;
+    padding-left: 60px;
+    padding-right: 40%;
+    padding-bottom: 80px;
+    background-color: rgba(255, 255, 255, 0.356);
+}
+
+.contenedor {
+    float: left;
+    width: 30%;
+    padding-right: 16px;
+}
+
+.contenido {
+    background: #fcfafaab;
+    padding: 5px;
+    color: #29323c;
+}
+
+figure{
+    background: #fcfafaab;
+    padding: 4px;
+}
+
+.card figure img{
+    height: 100px;
+    border-radius: 5px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #1883ba;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #1883ba;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.btn1 {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #138a36;
+    border-radius: 6px;
+    border: 2px solid  #138a36;
+    cursor: pointer;
+}
+
+.btn1:hover {
+    color: #138a36;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.parrafo {
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgba(78, 61, 61, 0.5);
+}
+
+.cnt {
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 15px;
+    /*suaviza los bordes*/
+    padding: 20px;
+    /* evita que el contenido se salga del contenedor*/
+    background-color: rgba(78, 61, 61, 0.815);
+    /* color translúcido */
+}
+
+
+/* Código para acordeon------------------------------------------------------------------------------------ */
+
+.accordion {
+    padding-top: 10px;
+    width: 100%;
+    margin: 0 0 20px;
+    clear: both;
+}
+
+.accordion-title {
+    position: relative;
+    display: block;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 300;
+    background: #5c7085;
+    color: #fff;
+    text-decoration: none;
+}
+
+.accordion-title.open {
+    background: #8b9c99;
+    color: #fff;
+}
+
+.accordion-title:hover {
+    background: #6a6a74;
+}
+
+.accordion-title span.toggle-icon:before {
+    content: "+";
+}
+
+.accordion-title.open span.toggle-icon:before {
+    content: "-";
+}
+
+.accordion-title span.toggle-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 38px;
+    font-weight: bold;
+}
+.accordion-content {
+    display: none;
+    padding: 20px;
+    overflow: auto;
+}
+
+.accordion-content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.accordion-content p {
+    margin: 0;
+}
+
+.accordion-content img {
+    display: block;
+    float: left;
+    margin: 0 15px 10px 0;
+    width: 50%;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .accordion-content {
+        padding: 10px 0;
+    }
+}
+
+
+/*cards-----------------------------------------------------------------------------------------------------*/
+
+.card {
+    width: auto;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
